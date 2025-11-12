@@ -31,7 +31,7 @@ public class Uni6Exe10 {
 
             switch (opcao) {
                 case 1:
-                    posFim = incluir(vet, posFim, sc);   // <<< CORRIGIDO
+                    posFim = incluir(vet, posFim, sc);
                     break;
                 case 2:
                     pesquisar(vet, posFim, sc);
@@ -77,7 +77,7 @@ public class Uni6Exe10 {
         System.out.print("pesquisar: ");
         int valor = sc.nextInt();
 
-        for (int i = 0; i < posFim; i++) {      // <<< CORRIGIDO: só até posFim
+        for (int i = 0; i < posFim; i++) {
             if (valor == vet[i]) {
                 System.out.println("Encontrado na posição: " + i + ".");
                 return i;
@@ -91,7 +91,7 @@ public class Uni6Exe10 {
     private void alterar(int vet[], int posFim, Scanner sc) {
         int valorID = pesquisar(vet, posFim, sc);
 
-        if (valorID != -1) {                    // <<< CORRIGIDO
+        if (valorID != -1) {
             System.out.print("Novo valor: ");
             vet[valorID] = sc.nextInt();
             System.out.println("alterando valor: " + vet[valorID] + ".");
@@ -101,14 +101,14 @@ public class Uni6Exe10 {
     private int excluir(int vet[], int posFim, Scanner sc) {
         int valorID = pesquisar(vet, posFim, sc);
 
-        if (valorID != -1) {                     // <<< CORRIGIDO
+        if (valorID != -1) {
             for (int i = valorID; i < posFim - 1; i++) {
                 vet[i] = vet[i + 1];
             }
             posFim--;
             System.out.println("excluido com sucesso.");
         }
-        return posFim;                           // <<< CORRIGIDO
+        return posFim;
     }
 
     public void mostrar(int vet[], int posFim) {
@@ -145,3 +145,4 @@ public class Uni6Exe10 {
         System.out.println("valores invertidos.");
     }
 }
+
